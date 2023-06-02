@@ -16,15 +16,18 @@ addPacienteButton.addEventListener("click", function (event) {
         return
     }
 
-    var pacienteTr = criaTr(paciente);
-
-    var tbody = document.querySelector("#tabela-pacientes")
-    tbody.appendChild(pacienteTr);
+    adicionaPaciente(paciente);
 
     form.reset();
     var mensagensErro = document.querySelector("#mensagens-erro");
     mensagensErro.innerHTML = "";
 })
+
+function adicionaPaciente(paciente) {
+    var pacienteTr = criaTr(paciente);
+    var tbody = document.querySelector("#tabela-pacientes")
+    tbody.appendChild(pacienteTr);
+}
 
 function formPaciente(form) {
 
